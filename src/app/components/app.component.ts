@@ -1,4 +1,14 @@
 import { Component } from '@angular/core';
+
+@Component({
+   moduleId: module.id,
+   selector: 'app-root',
+   templateUrl: 'app.component.html'
+})
+
+export class AppComponent { }
+
+/*import { Component } from '@angular/core';
 import { Http } from '@angular/http';
 
 @Component({
@@ -15,4 +25,4 @@ export class AppComponent {
         this.apiValues = values.json() as string[];
      });
   }
-}
+}*/
