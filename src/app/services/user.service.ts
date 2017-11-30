@@ -8,7 +8,7 @@ export class UserService {
     constructor(private http: Http, private config: AppConfig) { }
 
     getAll() {
-        return this.http.get(this.config.apiUrl + '/user', this.jwt()).map((response: Response) => response.json());
+        return this.http.get(this.config.apiUrl + '/user/', this.jwt()).map((response: Response) => response.json());
     }
 
     getById(_id: string) {
