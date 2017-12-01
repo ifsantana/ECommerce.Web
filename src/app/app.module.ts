@@ -13,6 +13,8 @@ import { LoginComponent } from './components/login.component';
 import { RegisterComponent } from './components/register.component';
 import { routing } from './app.routing';
 import { AppConfig } from './app.config';
+import { ProductQueryComponent } from './components/queries/product.query.component';
+import { QueriesModule } from './components/queries/queries.module';
 
 
 @NgModule({
@@ -27,7 +29,8 @@ import { AppConfig } from './app.config';
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    QueriesModule
   ],
   providers: [
     AppConfig,
