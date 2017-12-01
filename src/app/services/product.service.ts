@@ -12,8 +12,8 @@ export class ProductService {
         return this.http.get(this.config.apiUrl + '/product/', this.jwt()).map((response: Response) => response.json());
     }
 
-    getById(_id: string) {
-        return this.http.get(this.config.apiUrl + '/product/' + _id, this.jwt()).map((response: Response) => response.json());
+    getById(id: string) {
+        return this.http.get(this.config.apiUrl + '/product/' + id, this.jwt()).map((response: Response) => response.json());
     }
 
     create(product: Product) {
@@ -21,11 +21,11 @@ export class ProductService {
     }
 
     update(product: Product) {
-        return this.http.put(this.config.apiUrl + '/product/' + product._id, product, this.jwt());
+        return this.http.put(this.config.apiUrl + '/product/' + product.id, product, this.jwt());
     }
 
-    delete(_id: number) {
-        return this.http.delete(this.config.apiUrl + '/product/' + _id, this.jwt());
+    delete(id: number) {
+        return this.http.delete(this.config.apiUrl + '/product/' + id, this.jwt());
     }
 
     private jwt() {
